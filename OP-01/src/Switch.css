@@ -1,0 +1,4 @@
+/* preview switcher (dev only) */
+.op-switch{position:fixed;left:16px;bottom:16px;z-index:9999;display:flex;gap:6px;padding:6px;border-radius:999px;background:rgba(11,34,57,.92);box-shadow:0 8px 24px rgba(0,0,0,.3);font:600 .8rem ui-monospace,Menlo,monospace}
+.op-switch a{color:#fff;padding:8px 14px;border-radius:999px;letter-spacing:.06em;text-decoration:none}
+.op-switch a[aria-current="page"]{background:#f28c28}
