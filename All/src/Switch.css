@@ -1,0 +1,32 @@
+/* Preview switcher */
+.op-switch {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(11, 34, 57, 0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  font: 600 0.85rem ui-monospace, Menlo, monospace;
+}
+
+.op-switch a {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.op-switch a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.op-switch a[aria-current="page"] {
+  background: #f28c28;
+}
