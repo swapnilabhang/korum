@@ -11,7 +11,7 @@ const IMG = {
   diningInset: u("m7IpcYOx8hM", 900),
   event: u("Qzcby2EMkTU", 1400),
   brands: ["hMMbIptXPjI", "qnKhZJPKFD8", "Bn2cAE13daA", "LxgOZ6n5-4g", "MHN96iFvKIU", "E4B_hlQ9JSY"].map((id) => u(id, 1000)),
-  gallery: ["QUNNr7U30K8", "nNR_w0ifl1M", "i0BErr5RXNc", "a37XH6aJqNw", "Xtl8rQMu1y8"].map((id) => u(id, 1400)),
+  gallery: ["QUNNr7U30K8", "nNR_w0ifl1M", "i0BErr5RXNc", "/walkway.jpg", "Xtl8rQMu1y8"].map((id) => id.startsWith("/") ? id : u(id, 1400)),
 };
 
 function useReveal() {
