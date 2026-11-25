@@ -9,7 +9,7 @@ const u = (id, w = 1600) => `https://unsplash.com/photos/${id}/download?force=tr
 const IMG = {
   hero: u("X0yKdR_F9rM", 2000),
   discover: u("fxCvuwRiltc", 1400),
-  dining: u("j0dAs1yodko", 2000),
+  dining: "/dining.jpg",
   diningInset: u("m7IpcYOx8hM", 900),
   event: u("Qzcby2EMkTU", 1400),
   brands: ["hMMbIptXPjI", "qnKhZJPKFD8", "Bn2cAE13daA", "LxgOZ6n5-4g", "MHN96iFvKIU", "E4B_hlQ9JSY"].map((id) => u(id, 1000)),
