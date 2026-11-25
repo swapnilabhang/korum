@@ -212,7 +212,7 @@ function Dining() {
     </section>
   );
 }
-const dm = (name) => `/ent/${name}.svg`; /* dummy images in /public/ent, replace with real ones later */
+const dm = (name) => `/ent/${name}.jpg`; /* high-res real photos in /public/ent */
 const ENT = [
   { n: "Cinema", d: "IMAX and recliner screens", hrs: "10 am to 1 am", img: dm("cinema"), t: "g", st: [70, 95, 60] },
   { n: "Gaming", d: "VR arena, 80 arcade cabinets", hrs: "11 am to 11 pm", img: dm("gaming"), t: "e", st: [95, 40, 80] },

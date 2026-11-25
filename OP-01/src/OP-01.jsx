@@ -226,11 +226,11 @@ function Dining() {
 }
 
 const ENT = [
-  { n: "Cinema", d: "IMAX and recliner screens", hrs: "10 am to 1 am", img: IMG.gallery[1], t: "g", st: [70, 95, 60] },
-  { n: "Gaming", d: "VR arena, 80 arcade cabinets", hrs: "11 am to 11 pm", img: IMG.gallery[4], t: "e", st: [95, 40, 80] },
-  { n: "Family", d: "Indoor garden and play lawn", hrs: "10 am to 8 pm", img: IMG.gallery[2], t: "d", st: [45, 90, 70] },
-  { n: "Kids", d: "Clay studio and story hour", hrs: "10 am to 7 pm", img: IMG.gallery[3], t: "c", st: [50, 80, 55] },
-  { n: "Weekends", d: "Night markets and live sets", hrs: "Fri to Sun, 6 pm", img: IMG.gallery[0], t: "h", st: [75, 60, 98] },
+  { n: "Cinema", d: "IMAX and recliner screens", hrs: "10 am to 1 am", img: "/ent/cinema.jpg", t: "g", st: [70, 95, 60] },
+  { n: "Gaming", d: "VR arena, 80 arcade cabinets", hrs: "11 am to 11 pm", img: "/ent/gaming.jpg", t: "e", st: [95, 40, 80] },
+  { n: "Family", d: "Indoor garden and play lawn", hrs: "10 am to 8 pm", img: "/ent/family.jpg", t: "d", st: [45, 90, 70] },
+  { n: "Kids", d: "Clay studio and story hour", hrs: "10 am to 7 pm", img: "/ent/kids.jpg", t: "c", st: [50, 80, 55] },
+  { n: "Weekends", d: "Night markets and live sets", hrs: "Fri to Sun, 6 pm", img: "/ent/weekends.jpg", t: "h", st: [75, 60, 98] },
 ];
 
 /* Entertainment 2: arcade character select with stat bars. */
