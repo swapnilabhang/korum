@@ -73,7 +73,7 @@ function Nav({ y }) {
   const [open, setOpen] = useState(false);
   return (
     <header className={`nav ${y > 60 ? "solid" : ""}`}>
-      <a href="#top" className="logo" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM<span>Mall</span></a>
+      <a href="#top" className="logo" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM</a>
       <nav aria-label="Primary" className={open ? "open" : ""}>
         {links.map((l) => <a key={l} href={`#${id(l)}`} onClick={() => setOpen(false)}>{l}</a>)}
       </nav>
@@ -549,7 +549,7 @@ function Footer() {
     <footer className="foot">
       <div className="ft">
         <div className="ft-brand">
-          <a className="logo" href="#top" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM<span>Mall</span></a>
+          <a className="logo" href="#top" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM</a>
           <p>Korum Mall was drawn around daylight. Walkways open to a glass-roofed atrium, shops spill into garden terraces, and every level ends in a place to sit.</p>
           <form onSubmit={(e) => { e.preventDefault(); setOk(true); }}>
             <label htmlFor="em">Weekly events by email</label>
