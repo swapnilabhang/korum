@@ -517,8 +517,9 @@ h1,h2,h3,p,dd,address{overflow-wrap:anywhere}
 .hl-copy h1,.hl-copy p,.hl-copy small{text-shadow:0 2px 24px rgba(0,0,0,.45)}
 .hl-tabs button{color:rgba(255,255,255,.8)}
 /* bigger logo and menu text (desktop) */
-.logo{font-size:1.65rem}.mark{width:38px;height:28px;margin-right:12px}
+.logo{display:inline-flex;align-items:center}.logo img{display:block;height:44px;width:auto;transition:height .4s}.nav.solid .logo img{height:38px}
 @media (min-width:961px){
+  .logo img{height:52px}.nav.solid .logo img{height:42px}
   .nav nav{font-size:1.1rem;font-weight:500;gap:clamp(16px,2.4vw,38px)}
   .nav:not(.solid){text-shadow:0 1px 14px rgba(0,0,0,.45)}
 }

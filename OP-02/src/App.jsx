@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import logoLight from "./assets/logo.png"; /* white text: for dark backgrounds (hero, footer) */
+import logoDark from "./assets/logo-dark.png"; /* blue text: for the light solid nav */
 
 /* Free Unsplash photos (mall interiors, dining, fashion). Replace any ID or URL with your own.
    Local images: put them in /public and use "/name.jpg". */
@@ -83,7 +85,7 @@ function Nav({ y }) {
   const [open, setOpen] = useState(false);
   return (
     <header className={`nav ${y > 60 ? "solid" : ""}`}>
-      <a href="#top" className="logo" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM<span>Mall</span></a>
+      <a href="#top" className="logo" aria-label="Korum Mall home"><img src={y > 60 ? logoDark : logoLight} alt="Korum" width="340" height="80" /></a>
       <nav aria-label="Primary" className={open ? "open" : ""}>
         {links.map((l) => <a key={l} href={`#${id(l)}`} onClick={() => setOpen(false)}>{l}</a>)}
       </nav>
@@ -489,7 +491,7 @@ function Footer() {
     <footer className="foot">
       <div className="ft">
         <div className="ft-brand">
-          <a className="logo" href="#top" aria-label="Korum Mall home"><i className="mark" aria-hidden="true" />KORUM<span>Mall</span></a>
+          <a className="logo" href="#top" aria-label="Korum Mall home"><img src={logoLight} alt="Korum" width="340" height="80" /></a>
           <p>Korum Mall was drawn around daylight. Walkways open to a glass-roofed atrium, shops spill into garden terraces, and every level ends in a place to sit.</p>
           <form onSubmit={(e) => { e.preventDefault(); setOk(true); }}>
             <label htmlFor="em">Weekly events by email</label>
