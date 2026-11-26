@@ -343,17 +343,43 @@ function Events() {
         {evs.map((e, i) => (
           <div key={e[2]} className={`ev-bg ${i === a ? "on" : ""}`}><Pic src={e[5]} tone={e[4]} label={e[2]} /></div>
         ))}
-        <div className="date" key={`d${a}`}><b>{f[0]}</b>{f[1]}</div>
-        <h3 key={`h${a}`}>{f[2]}</h3><p key={`p${a}`}>{f[3]}</p>
+        <div className="date" key={`d${a}`}><b>{f[0]}</b><span>{f[1]}</span></div>
+        <h3 key={`h${a}`}>{f[2]}</h3>
+        <p key={`p${a}`}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/></svg>
+          {f[3]}
+        </p>
       </Reveal>
       <div className="ev-side" onMouseLeave={() => setA(0)}>
-        {evs.map(([d, m, t, w], i) => (
-          <a href="#events" key={t} className={`ev-row r${i} ${i === a ? "on" : ""}`}
-            onMouseEnter={() => setA(i)} onFocus={() => setA(i)} onClick={() => setA(i)}>
-            <span className="d">{d} {m}</span><span className="t">{t}</span><em>{w}</em>
-          </a>
-        ))}
-        <a className="link" href="#events">View all events</a>
+        <div className="ev-side-head">
+          <span className="ev-pill"><i className="ev-live-dot" /> Upcoming Lineup</span>
+          <h2 className="ev-side-title">December at Korum</h2>
+        </div>
+        <div className="ev-list">
+          {evs.map(([d, m, t, w], i) => (
+            <a href="#events" key={t} className={`ev-row r${i} ${i === a ? "on" : ""}`}
+              onMouseEnter={() => setA(i)} onFocus={() => setA(i)} onClick={(e) => { e.preventDefault(); setA(i); }}>
+              <div className="ev-date-badge">
+                <span className="ev-day">{d}</span>
+                <span className="ev-mon">{m}</span>
+              </div>
+              <div className="ev-info">
+                <span className="t">{t}</span>
+                <span className="ev-meta">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/></svg>
+                  {w}
+                </span>
+              </div>
+              <span className="ev-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          ))}
+        </div>
+        <a className="ev-cta" href="#events">
+          <span>View all events</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </section>
   );
